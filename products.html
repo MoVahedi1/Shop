@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="لیست تمام محصولات لوازم خانگی - نمونه کار لوازم خانگی">
+  <title>محصولات - نمونه کار لوازم خانگی</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Vazirmatn', sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- هدر سایت -->
+  <header class="header" role="banner">
+    <div class="container">
+        <div class="header-content">
+        <a href="index.html" class="logo" aria-label="برگشت به صفحه اصلی">نمونه کار لوازم خانگی</a>
+        
+        <div class="header-actions">
+          <a href="cart.html" class="cart-icon" aria-label="سبد خرید">
+            🛒
+            <span class="cart-count" aria-label="تعداد آیتم‌ها در سبد">3</span>
+          </a>
+          <button class="menu-toggle" aria-label="منوی اصلی" aria-expanded="false" id="menuToggle">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="nav" role="navigation" aria-label="منوی اصلی">
+      <div class="container">
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="index.html">صفحه اصلی</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link-active">محصولات</a></li>
+          <li class="nav-item"><a href="index.html#categories">دسته‌بندی‌ها</a></li>
+          <li class="nav-item"><a href="index.html#about">درباره ما</a></li>
+          <li class="nav-item"><a href="index.html#contact">تماس با ما</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <div class="container" style="margin-top: var(--spacing-xl);">
+      <h1 style="margin-bottom: var(--spacing-xl);">همه محصولات</h1>
+      
+      <!-- کنترل‌های مرتب‌سازی -->
+      <div class="sort-controls">
+        <div>
+          <label for="sortSelect" class="sr-only">مرتب‌سازی بر اساس</label>
+          <select id="sortSelect" class="sort-select" aria-label="مرتب‌سازی محصولات">
+            <option value="popular">پرفروش‌ترین</option>
+            <option value="cheapest">ارزان‌ترین</option>
+            <option value="newest">جدیدترین</option>
+            <option value="expensive">گران‌ترین</option>
+          </select>
+        </div>
+        <div>
+          <span>۶ محصول یافت شد</span>
+        </div>
+      </div>
+
+      <div class="products-layout">
+        <!-- سایدبار فیلتر -->
+        <aside class="sidebar" role="complementary" aria-label="فیلترهای محصولات">
+          <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-xl);">فیلتر محصولات</h2>
+          
+          <!-- فیلتر دسته‌بندی -->
+          <div class="filter-group">
+            <h3>دسته‌بندی</h3>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="category" value="refrigerator">
+                <span>یخچال</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="category" value="washer">
+                <span>ماشین لباس‌شویی</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="category" value="tv">
+                <span>تلویزیون</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="category" value="small">
+                <span>لوازم کوچک خانگی</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- فیلتر بازه قیمت -->
+          <div class="filter-group">
+            <h3>بازه قیمت</h3>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="price" value="0-2000000">
+                <span>تا ۲,۰۰۰,۰۰۰ تومان</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="price" value="2000000-5000000">
+                <span>۲,۰۰۰,۰۰۰ تا ۵,۰۰۰,۰۰۰ تومان</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="price" value="5000000-10000000">
+                <span>۵,۰۰۰,۰۰۰ تا ۱۰,۰۰۰,۰۰۰ تومان</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="price" value="10000000+">
+                <span>بالای ۱۰,۰۰۰,۰۰۰ تومان</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- فیلتر برند -->
+          <div class="filter-group">
+            <h3>برند</h3>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="brand" value="سامانه">
+                <span>سامانه</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="brand" value="بهمن">
+                <span>بهمن</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="brand" value="نوا">
+                <span>نوا</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="brand" value="پاکان">
+                <span>پاکان</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="brand" value="آوا">
+                <span>آوا</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="brand" value="سفره">
+                <span>سفره</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- فیلتر وضعیت موجودی -->
+          <div class="filter-group">
+            <h3>وضعیت موجودی</h3>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="stock" value="in-stock" checked>
+                <span>موجود</span>
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="checkbox" name="stock" value="out-of-stock">
+                <span>ناموجود</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- دکمه اعمال فیلتر -->
+          <button type="button" class="btn btn-primary btn-block">اعمال فیلتر</button>
+          <button type="button" class="btn btn-secondary btn-block" style="margin-top: var(--spacing-sm);">پاک کردن فیلترها</button>
+        </aside>
+
+        <!-- گرید محصولات -->
+        <div class="products-container">
+          <div class="products-grid">
+            <!-- محصول 1: یخچال فریزر -->
+            <article class="product-card" role="article" aria-labelledby="prod-1">
+              <span class="product-badge">پرفروش</span>
+              <img src="a100.1.jpg" alt="یخچال فریزر مدل A100" class="product-image" loading="lazy">
+              <div class="product-info">
+                <p class="product-brand">برند: سامانه</p>
+                <h3 class="product-title" id="prod-1">یخچال فریزر مدل A100</h3>
+                <div class="product-rating" aria-label="امتیاز ۴.۶ از ۵">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span>۴.۶ (۱۲۸ نظر)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">۱۷,۷۰۰,۰۰۰ تومان</span>
+                </div>
+                <p class="product-stock stock-in">موجود در انبار (۱۲ عدد)</p>
+                <div class="product-actions">
+                  <button class="btn btn-success btn-sm" aria-label="افزودن به سبد خرید">+</button>
+                  <a href="product.html?id=1" class="btn btn-primary" style="flex: 1;">جزئیات</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- محصول 2: ماشین لباس‌شویی -->
+            <article class="product-card" role="article" aria-labelledby="prod-2">
+              <span class="product-badge new">جدید</span>
+              <img src="w70.jpg" alt="ماشین لباس‌شویی 7 کیلو مدل W70" class="product-image" loading="lazy">
+              <div class="product-info">
+                <p class="product-brand">برند: بهمن</p>
+                <h3 class="product-title" id="prod-2">ماشین لباس‌شویی 7 کیلو مدل W70</h3>
+                <div class="product-rating" aria-label="امتیاز ۴.۲ از ۵">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span>۴.۲ (۵۸ نظر)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">۳۰,۰۰۰,۰۰۰ تومان</span>
+                </div>
+                <p class="product-stock stock-in">موجود در انبار (۵ عدد)</p>
+                <div class="product-actions">
+                  <button class="btn btn-success btn-sm" aria-label="افزودن به سبد خرید">+</button>
+                  <a href="product.html?id=2" class="btn btn-primary" style="flex: 1;">جزئیات</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- محصول 3: تلویزیون -->
+            <article class="product-card" role="article" aria-labelledby="prod-3">
+              <span class="product-badge suggested">پیشنهاد</span>
+              <img src="50inch.jpg" alt="تلویزیون هوشمند 50 اینچ" class="product-image" loading="lazy">
+              <div class="product-info">
+                <p class="product-brand">برند: نوا</p>
+                <h3 class="product-title" id="prod-3">تلویزیون هوشمند 50 اینچ</h3>
+                <div class="product-rating" aria-label="امتیاز ۴.۸ از ۵">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span>۴.۸ (۲۴۰ نظر)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">۲۸,۹۰۰,۰۰۰ تومان</span>
+                </div>
+                <p class="product-stock stock-in">موجود در انبار (۳ عدد)</p>
+                <div class="product-actions">
+                  <button class="btn btn-success btn-sm" aria-label="افزودن به سبد خرید">+</button>
+                  <a href="product.html?id=3" class="btn btn-primary" style="flex: 1;">جزئیات</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- محصول 4: جاروبرقی -->
+            <article class="product-card" role="article" aria-labelledby="prod-4">
+              <img src="v20.jpg" alt="جاروبرقی بی‌سیم مدل V20" class="product-image" loading="lazy">
+              <div class="product-info">
+                <p class="product-brand">برند: پاکان</p>
+                <h3 class="product-title" id="prod-4">جاروبرقی بی‌سیم مدل V20</h3>
+                <div class="product-rating" aria-label="امتیاز ۴.۱ از ۵">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span>۴.۱ (۲۴ نظر)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">۵,۸۷۰,۰۰۰ تومان</span>
+                </div>
+                <p class="product-stock stock-in">موجود در انبار (۲۰ عدد)</p>
+                <div class="product-actions">
+                  <button class="btn btn-success btn-sm" aria-label="افزودن به سبد خرید">+</button>
+                  <a href="product.html?id=4" class="btn btn-primary" style="flex: 1;">جزئیات</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- محصول 5: مایکروویو -->
+            <article class="product-card" role="article" aria-labelledby="prod-5">
+              <span class="product-badge out-of-stock">ناموجود</span>
+              <img src="25litr.jpg" alt="مایکروویو دیجیتال 25 لیتر" class="product-image" loading="lazy" style="opacity: 0.6;">
+              <div class="product-info">
+                <p class="product-brand">برند: آوا</p>
+                <h3 class="product-title" id="prod-5">مایکروویو دیجیتال 25 لیتر</h3>
+                <div class="product-rating" aria-label="امتیاز ۳.۹ از ۵">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span>۳.۹ (۱۲ نظر)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">۱۵,۱۰۰,۰۰۰ تومان</span>
+                </div>
+                <p class="product-stock stock-out">ناموجود</p>
+                <div class="product-actions">
+                  <button class="btn btn-secondary btn-sm" disabled aria-label="ناموجود">+</button>
+                  <a href="product.html?id=5" class="btn btn-primary" style="flex: 1;">جزئیات</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- محصول 6: آبمیوه‌گیری -->
+            <article class="product-card" role="article" aria-labelledby="prod-6">
+              <img src="fruite.jpg" alt="آبمیوه‌گیری چندکاره" class="product-image" loading="lazy">
+              <div class="product-info">
+                <p class="product-brand">برند: سفره</p>
+                <h3 class="product-title" id="prod-6">آبمیوه‌گیری چندکاره</h3>
+                <div class="product-rating" aria-label="امتیاز ۴.۰ از ۵">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span>۴.۰ (۴۵ نظر)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">۱۷,۸۹۰,۰۰۰ تومان</span>
+                </div>
+                <p class="product-stock stock-in">موجود در انبار (۷ عدد)</p>
+                <div class="product-actions">
+                  <button class="btn btn-success btn-sm" aria-label="افزودن به سبد خرید">+</button>
+                  <a href="product.html?id=6" class="btn btn-primary" style="flex: 1;">جزئیات</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- صفحه‌بندی -->
+          <nav class="pagination" aria-label="صفحه‌بندی محصولات">
+            <a href="#" aria-label="صفحه قبل">&laquo; قبلی</a>
+            <span class="active">۱</span>
+            <a href="#" aria-label="صفحه بعد">بعدی &raquo;</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- فوتر -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>درباره ما</h3>
+          <p>فروشگاه آنلاین نمونه کار لوازم خانگی با سابقه چندین ساله در زمینه عرضه لوازم خانگی باکیفیت و با قیمت مناسب.</p>
+        </div>
+        <div class="footer-section">
+          <h3>لینک‌های مفید</h3>
+          <ul>
+            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="products.html">محصولات</a></li>
+            <li><a href="cart.html">سبد خرید</a></li>
+            <li><a href="index.html#about">درباره ما</a></li>
+            <li><a href="index.html#contact">تماس با ما</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>تماس با ما</h3>
+          <ul>
+            <li><span style="display: inline-block; width: 24px;">📞</span> تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+            <li><span style="display: inline-block; width: 24px;">📧</span> ایمیل: info@example.com</li>
+            <li><span style="display: inline-block; width: 24px;">📍</span> آدرس: تهران، خیابان نمونه</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="اینستاگرام" title="اینستاگرام">📷</a>
+            <a href="#" aria-label="تلگرام" title="تلگرام">✈️</a>
+            <a href="#" aria-label="واتساپ" title="واتساپ">💬</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>اطلاعات حقوقی</h3>
+          <ul>
+            <li><a href="#">قوانین و مقررات</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#">شرایط بازگشت کالا</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; ۱۴۰۳ نمونه کار لوازم خانگی. تمامی حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // باز و بسته کردن منو در موبایل
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        const isExpanded = nav.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+  </script>
+</body>
+</html>

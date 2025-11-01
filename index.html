@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="فروشگاه آنلاین لوازم خانگی - نمونه کار لوازم خانگی">
+  <title>صفحه اصلی - نمونه کار لوازم خانگی</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- فونت Vazirmatn از Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Vazirmatn', sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- هدر سایت -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="برگشت به صفحه اصلی">نمونه کار لوازم خانگی</a>
+        
+        <!-- آیکون‌های اکشن -->
+        <div class="header-actions">
+          <a href="cart.html" class="cart-icon" aria-label="سبد خرید">
+            🛒
+            <span class="cart-count" aria-label="تعداد آیتم‌ها در سبد">3</span>
+          </a>
+          <button class="menu-toggle" aria-label="منوی اصلی" aria-expanded="false" id="menuToggle">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- منوی ناوبری -->
+    <nav class="nav" role="navigation" aria-label="منوی اصلی">
+      <div class="container">
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="index.html" class="nav-link-active">صفحه اصلی</a></li>
+          <li class="nav-item"><a href="products.html">محصولات</a></li>
+          <li class="nav-item"><a href="index.html#categories">دسته‌بندی‌ها</a></li>
+          <li class="nav-item"><a href="index.html#about">درباره ما</a></li>
+          <li class="nav-item"><a href="index.html#contact">تماس با ما</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- بخش اصلی محتوا -->
+  <main role="main">
+    <!-- بخش هرو (Hero Section) -->
+    <section class="hero" aria-label="بخش معرفی">
+      <div class="container">
+        <div class="hero-content">
+          <h1>به فروشگاه آنلاین لوازم خانگی خوش آمدید</h1>
+          <p>جدیدترین و باکیفیت‌ترین محصولات لوازم خانگی با بهترین قیمت</p>
+          <a href="products.html" class="btn btn-primary btn-lg">مشاهده محصولات</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- دسته‌بندی‌های اصلی -->
+    <section id="categories" class="section" aria-labelledby="categories-title">
+      <div class="container">
+        <h2 id="categories-title" class="section-title">دسته‌بندی‌های محصولات</h2>
+        <div class="categories">
+          <div class="category-card" role="button" tabindex="0" aria-label="یخچال">
+            <div class="category-icon">🧊</div>
+            <h3>یخچال</h3>
+          </div>
+          <div class="category-card" role="button" tabindex="0" aria-label="ماشین لباس‌شویی">
+            <div class="category-icon">🌀</div>
+            <h3>ماشین لباس‌شویی</h3>
+          </div>
+          <div class="category-card" role="button" tabindex="0" aria-label="تلویزیون">
+            <div class="category-icon">📺</div>
+            <h3>تلویزیون</h3>
+          </div>
+          <div class="category-card" role="button" tabindex="0" aria-label="لوازم کوچک خانگی">
+            <div class="category-icon">🔌</div>
+            <h3>کوچک‌خانگی</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- بخش محصولات پرفروش -->
+    <section class="section" aria-labelledby="popular-title">
+      <div class="container">
+        <h2 id="popular-title" class="section-title">محصولات پرفروش</h2>
+        <div class="products-grid">
+          <!-- محصول 1: یخچال فریزر -->
+          <article class="product-card" role="article" aria-labelledby="product-1">
+            <span class="product-badge">پرفروش</span>
+            <img src="a100.1.jpg" alt="یخچال فریزر مدل A100" class="product-image" loading="lazy">
+            <div class="product-info">
+              <p class="product-brand">برند: سامانه</p>
+              <h3 class="product-title" id="product-1">یخچال فریزر مدل A100</h3>
+              <div class="product-rating" aria-label="امتیاز ۴.۶ از ۵">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۴.۶ (۱۲۸ نظر)</span>
+              </div>
+              <div class="product-price">
+                <span class="price-current">۱۷,۷۰۰,۰۰۰ تومان</span>
+              </div>
+              <p class="product-stock stock-in">موجود در انبار (۱۲ عدد)</p>
+              <div class="product-actions">
+                <a href="product.html?id=1" class="btn btn-primary btn-block">مشاهده جزئیات</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- محصول 2: ماشین لباس‌شویی -->
+          <article class="product-card" role="article" aria-labelledby="product-2">
+            <span class="product-badge new">جدید</span>
+            <img src="w70.jpg" alt="ماشین لباس‌شویی 7 کیلو مدل W70" class="product-image" loading="lazy">
+            <div class="product-info">
+              <p class="product-brand">برند: بهمن</p>
+              <h3 class="product-title" id="product-2">ماشین لباس‌شویی 7 کیلو مدل W70</h3>
+              <div class="product-rating" aria-label="امتیاز ۴.۲ از ۵">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۴.۲ (۵۸ نظر)</span>
+              </div>
+              <div class="product-price">
+                <span class="price-current">۳۰,۰۰۰,۰۰۰ تومان</span>
+              </div>
+              <p class="product-stock stock-in">موجود در انبار (۵ عدد)</p>
+              <div class="product-actions">
+                <a href="product.html?id=2" class="btn btn-primary btn-block">مشاهده جزئیات</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- محصول 3: تلویزیون -->
+          <article class="product-card" role="article" aria-labelledby="product-3">
+            <span class="product-badge suggested">پیشنهاد</span>
+            <img src="50inch.jpg" alt="تلویزیون هوشمند 50 اینچ" class="product-image" loading="lazy">
+            <div class="product-info">
+              <p class="product-brand">برند: نوا</p>
+              <h3 class="product-title" id="product-3">تلویزیون هوشمند 50 اینچ</h3>
+              <div class="product-rating" aria-label="امتیاز ۴.۸ از ۵">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۴.۸ (۲۴۰ نظر)</span>
+              </div>
+              <div class="product-price">
+                <span class="price-current">۲۸,۹۰۰,۰۰۰ تومان</span>
+              </div>
+              <p class="product-stock stock-in">موجود در انبار (۳ عدد)</p>
+              <div class="product-actions">
+                <a href="product.html?id=3" class="btn btn-primary btn-block">مشاهده جزئیات</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- محصول 4: جاروبرقی -->
+          <article class="product-card" role="article" aria-labelledby="product-4">
+            <img src="v20.jpg" alt="جاروبرقی بی‌سیم مدل V20" class="product-image" loading="lazy">
+            <div class="product-info">
+              <p class="product-brand">برند: پاکان</p>
+              <h3 class="product-title" id="product-4">جاروبرقی بی‌سیم مدل V20</h3>
+              <div class="product-rating" aria-label="امتیاز ۴.۱ از ۵">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۴.۱ (۲۴ نظر)</span>
+              </div>
+              <div class="product-price">
+                <span class="price-current">۵,۸۷۰,۰۰۰ تومان</span>
+              </div>
+              <p class="product-stock stock-in">موجود در انبار (۲۰ عدد)</p>
+              <div class="product-actions">
+                <a href="product.html?id=4" class="btn btn-primary btn-block">مشاهده جزئیات</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- بخش نظرات/امتیاز نمونه -->
+    <section class="section" aria-labelledby="reviews-title" style="background-color: var(--bg-secondary); padding: var(--spacing-xl) 0;">
+      <div class="container">
+        <h2 id="reviews-title" class="section-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg);">نظرات مشتریان</h2>
+        <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
+          <div class="product-card" style="padding: var(--spacing-md);">
+            <div class="product-info" style="padding: 0;">
+              <h3 style="font-size: var(--font-size-base); margin-bottom: var(--spacing-xs);">رضا احمدی</h3>
+              <div class="product-rating" style="font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۵.۰</span>
+              </div>
+              <p style="font-size: var(--font-size-sm); margin: 0; line-height: 1.6;">یخچالی که خریدم عالی بود. کیفیت بالا و قیمت مناسبی داشت. پیشنهاد می‌کنم.</p>
+            </div>
+          </div>
+          <div class="product-card" style="padding: var(--spacing-md);">
+            <div class="product-info" style="padding: 0;">
+              <h3 style="font-size: var(--font-size-base); margin-bottom: var(--spacing-xs);">مریم کریمی</h3>
+              <div class="product-rating" style="font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۴.۵</span>
+              </div>
+              <p style="font-size: var(--font-size-sm); margin: 0; line-height: 1.6;">ماشین لباس‌شویی خیلی خوب کار می‌کنه. صدای کمی داره ولی در کل راضی هستم.</p>
+            </div>
+          </div>
+          <div class="product-card" style="padding: var(--spacing-md);">
+            <div class="product-info" style="padding: 0;">
+              <h3 style="font-size: var(--font-size-base); margin-bottom: var(--spacing-xs);">علی محمدی</h3>
+              <div class="product-rating" style="font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span>۵.۰</span>
+              </div>
+              <p style="font-size: var(--font-size-sm); margin: 0; line-height: 1.6;">تلویزیون نوا کیفیت تصویر فوق‌العاده‌ای داره. ارسال هم سریع بود.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- فوتر -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>درباره ما</h3>
+          <p>فروشگاه آنلاین نمونه کار لوازم خانگی با سابقه چندین ساله در زمینه عرضه لوازم خانگی باکیفیت و با قیمت مناسب.</p>
+        </div>
+        <div class="footer-section">
+          <h3>لینک‌های مفید</h3>
+          <ul>
+            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="products.html">محصولات</a></li>
+            <li><a href="cart.html">سبد خرید</a></li>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>تماس با ما</h3>
+          <ul>
+            <li><span style="display: inline-block; width: 24px;">📞</span> تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+            <li><span style="display: inline-block; width: 24px;">📧</span> ایمیل: info@example.com</li>
+            <li><span style="display: inline-block; width: 24px;">📍</span> آدرس: تهران، خیابان نمونه</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="اینستاگرام" title="اینستاگرام">📷</a>
+            <a href="#" aria-label="تلگرام" title="تلگرام">✈️</a>
+            <a href="#" aria-label="واتساپ" title="واتساپ">💬</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>اطلاعات حقوقی</h3>
+          <ul>
+            <li><a href="#">قوانین و مقررات</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#">شرایط بازگشت کالا</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; ۱۴۰۳ نمونه کار لوازم خانگی. تمامی حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- اسکریپت ساده برای باز/بسته کردن منو در موبایل -->
+  <script>
+    // باز و بسته کردن منو در موبایل
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        const isExpanded = nav.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+  </script>
+</body>
+</html>

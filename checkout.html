@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="صفحه پرداخت - نمونه کار لوازم خانگی">
+  <title>پرداخت - نمونه کار لوازم خانگی</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Vazirmatn', sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- هدر سایت -->
+  <header class="header" role="banner">
+    <div class="container">
+        <div class="header-content">
+        <a href="index.html" class="logo" aria-label="برگشت به صفحه اصلی">نمونه کار لوازم خانگی</a>
+        
+        <div class="header-actions">
+          <a href="cart.html" class="cart-icon" aria-label="سبد خرید">
+            🛒
+            <span class="cart-count" aria-label="تعداد آیتم‌ها در سبد">3</span>
+          </a>
+          <button class="menu-toggle" aria-label="منوی اصلی" aria-expanded="false" id="menuToggle">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="nav" role="navigation" aria-label="منوی اصلی">
+      <div class="container">
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="index.html">صفحه اصلی</a></li>
+          <li class="nav-item"><a href="products.html">محصولات</a></li>
+          <li class="nav-item"><a href="index.html#categories">دسته‌بندی‌ها</a></li>
+          <li class="nav-item"><a href="index.html#about">درباره ما</a></li>
+          <li class="nav-item"><a href="index.html#contact">تماس با ما</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <div class="container" style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-3xl);">
+      <!-- مسیر ناوبری -->
+      <nav aria-label="مسیر ناوبری" style="margin-bottom: var(--spacing-lg);">
+        <a href="index.html">صفحه اصلی</a> / 
+        <a href="cart.html">سبد خرید</a> / 
+        <span>پرداخت</span>
+      </nav>
+
+      <h1 style="margin-bottom: var(--spacing-xl);">تکمیل اطلاعات و پرداخت</h1>
+
+      <div class="checkout-layout" style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-3xl);">
+        <!-- بخش اصلی: فرم اطلاعات و پرداخت -->
+        <div>
+          <!-- اطلاعات شخصی -->
+          <section style="background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl);">
+            <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-xl);">اطلاعات شخصی</h2>
+            <form id="checkoutForm">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">نام *</label>
+                  <input type="text" id="firstName" class="form-control" placeholder="علی" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">نام خانوادگی *</label>
+                  <input type="text" id="lastName" class="form-control" placeholder="احمدی" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">ایمیل *</label>
+                <input type="email" id="email" class="form-control" placeholder="example@email.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone" class="form-label">شماره تماس *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="09xxxxxxxxx" pattern="09[0-9]{9}" required>
+                <small style="color: var(--text-secondary); font-size: var(--font-size-sm);">فرمت: 09xxxxxxxxx</small>
+              </div>
+            </form>
+          </section>
+
+          <!-- آدرس تحویل -->
+          <section style="background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl);">
+            <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-xl);">آدرس تحویل</h2>
+            <form id="addressForm">
+              <div class="form-group">
+                <label for="province" class="form-label">استان *</label>
+                <select id="province" class="form-control" required>
+                  <option value="">انتخاب کنید</option>
+                  <option value="tehran">تهران</option>
+                  <option value="isfahan">اصفهان</option>
+                  <option value="shiraz">شیراز</option>
+                  <option value="mashhad">مشهد</option>
+                  <option value="tabriz">تبریز</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="city" class="form-label">شهر *</label>
+                <input type="text" id="city" class="form-control" placeholder="تهران" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="address" class="form-label">آدرس کامل *</label>
+                <textarea id="address" class="form-control" placeholder="خیابان، کوچه، پلاک، واحد..." required rows="3"></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="postalCode" class="form-label">کد پستی</label>
+                <input type="text" id="postalCode" class="form-control" placeholder="1234567890" pattern="[0-9]{10}">
+                <small style="color: var(--text-secondary); font-size: var(--font-size-sm);">۱۰ رقم عددی</small>
+              </div>
+              
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" name="saveAddress" style="margin-left: var(--spacing-sm);">
+                  <span>ذخیره این آدرس برای خریدهای بعدی</span>
+                </label>
+              </div>
+            </form>
+          </section>
+
+          <!-- روش پرداخت -->
+          <section style="background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl);">
+            <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-xl);">روش پرداخت</h2>
+            <form id="paymentForm">
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="paymentMethod" value="online" checked style="margin-left: var(--spacing-sm);">
+                  <span style="font-weight: 600;">پرداخت آنلاین</span>
+                </label>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-xs); margin-right: var(--spacing-xl);">
+                  پرداخت از طریق درگاه‌های بانکی (زرین‌پال، سامان، ملت و...)
+                </p>
+              </div>
+              
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="paymentMethod" value="cash" style="margin-left: var(--spacing-sm);">
+                  <span style="font-weight: 600;">پرداخت در محل (پس از تحویل)</span>
+                </label>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-xs); margin-right: var(--spacing-xl);">
+                  پرداخت وجه به مأمور پست در زمان تحویل کالا
+                </p>
+              </div>
+              
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="paymentMethod" value="installment" style="margin-left: var(--spacing-sm);">
+                  <span style="font-weight: 600;">پرداخت اقساطی</span>
+                </label>
+                <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-xs); margin-right: var(--spacing-xl);">
+                  خرید به صورت قسطی (نیاز به تایید اولیه)
+                </p>
+              </div>
+            </form>
+          </section>
+
+          <!-- روش ارسال -->
+          <section style="background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
+            <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-xl);">روش ارسال</h2>
+            <form id="shippingForm">
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="shippingMethod" value="express" checked style="margin-left: var(--spacing-sm);">
+                  <span style="font-weight: 600;">پست سریع (ارسال تا ۲۴ ساعت) - ۵۰,۰۰۰ تومان</span>
+                </label>
+              </div>
+              
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="shippingMethod" value="normal" style="margin-left: var(--spacing-sm);">
+                  <span style="font-weight: 600;">پست معمولی (ارسال ۳-۵ روز) - ۳۰,۰۰۰ تومان</span>
+                </label>
+              </div>
+              
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="shippingMethod" value="free" style="margin-left: var(--spacing-sm);">
+                  <span style="font-weight: 600;">ارسال رایگان (بالای ۵,۰۰۰,۰۰۰ تومان) - رایگان</span>
+                </label>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <!-- بخش راست: خلاصه سفارش -->
+        <div>
+          <div class="cart-summary" style="position: sticky; top: 100px;">
+            <h2 style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-xl);">خلاصه سفارش</h2>
+            
+            <!-- لیست محصولات -->
+            <div style="margin-bottom: var(--spacing-lg);">
+              <h3 style="font-size: var(--font-size-base); margin-bottom: var(--spacing-md);">محصولات (۳ آیتم)</h3>
+              <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <div style="display: flex; justify-content: space-between; font-size: var(--font-size-sm);">
+                  <span>یخچال فریزر × ۱</span>
+                  <span>۱۷,۷۰۰,۰۰۰ تومان</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: var(--font-size-sm);">
+                  <span>ماشین لباس‌شویی × ۲</span>
+                  <span>۶۰,۰۰۰,۰۰۰ تومان</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: var(--font-size-sm);">
+                  <span>جاروبرقی × ۱</span>
+                  <span>۵,۸۷۰,۰۰۰ تومان</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="summary-row">
+              <span>جمع جزئی</span>
+              <span>۸۳,۵۷۰,۰۰۰ تومان</span>
+            </div>
+            
+            <div class="summary-row">
+              <span>هزینه ارسال</span>
+              <span id="shippingCost" style="color: var(--color-success);">رایگان</span>
+            </div>
+            
+            <div class="summary-row">
+              <span>تخفیف</span>
+              <span style="color: var(--color-success);">-۳,۰۰۰,۰۰۰ تومان</span>
+            </div>
+            
+            <div class="summary-row">
+              <span>جمع کل</span>
+              <span id="totalAmount">۸۰,۵۷۰,۰۰۰ تومان</span>
+            </div>
+
+            <!-- نکات مهم -->
+            <div style="margin-top: var(--spacing-lg); padding-top: var(--spacing-lg); border-top: 1px solid var(--bg-light);">
+              <h3 style="font-size: var(--font-size-base); margin-bottom: var(--spacing-md);">نکات مهم</h3>
+              <ul style="list-style: none; font-size: var(--font-size-sm); line-height: 2; color: var(--text-secondary);">
+                <li>✓ ارسال در تهران: ۲۴-۴۸ ساعت</li>
+                <li>✓ ارسال به شهرستان: ۳-۵ روز کاری</li>
+                <li>✓ ضمانت اصالت کالا</li>
+                <li>✓ امکان بازگشت تا ۷ روز</li>
+              </ul>
+            </div>
+
+            <!-- دکمه نهایی پرداخت -->
+            <button type="submit" form="checkoutForm" class="btn btn-primary btn-lg btn-block" style="margin-top: var(--spacing-xl);" onclick="handleCheckout(event)">
+              پرداخت و ثبت سفارش →
+            </button>
+            
+            <p style="font-size: var(--font-size-xs); color: var(--text-secondary); text-align: center; margin-top: var(--spacing-md);">
+              با کلیک روی دکمه پرداخت، شما قوانین و مقررات سایت را می‌پذیرید.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- فوتر -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>درباره ما</h3>
+          <p>فروشگاه آنلاین نمونه کار لوازم خانگی با سابقه چندین ساله در زمینه عرضه لوازم خانگی باکیفیت و با قیمت مناسب.</p>
+        </div>
+        <div class="footer-section">
+          <h3>لینک‌های مفید</h3>
+          <ul>
+            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="products.html">محصولات</a></li>
+            <li><a href="cart.html">سبد خرید</a></li>
+            <li><a href="index.html#about">درباره ما</a></li>
+            <li><a href="index.html#contact">تماس با ما</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>تماس با ما</h3>
+          <ul>
+            <li><span style="display: inline-block; width: 24px;">📞</span> تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+            <li><span style="display: inline-block; width: 24px;">📧</span> ایمیل: info@example.com</li>
+            <li><span style="display: inline-block; width: 24px;">📍</span> آدرس: تهران، خیابان نمونه</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="اینستاگرام" title="اینستاگرام">📷</a>
+            <a href="#" aria-label="تلگرام" title="تلگرام">✈️</a>
+            <a href="#" aria-label="واتساپ" title="واتساپ">💬</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>اطلاعات حقوقی</h3>
+          <ul>
+            <li><a href="#">قوانین و مقررات</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#">شرایط بازگشت کالا</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; ۱۴۰۳ نمونه کار لوازم خانگی. تمامی حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // باز و بسته کردن منو در موبایل
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        const isExpanded = nav.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+
+    // بروزرسانی هزینه ارسال
+    document.querySelectorAll('input[name="shippingMethod"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const shippingCostEl = document.getElementById('shippingCost');
+        if (this.value === 'free') {
+          shippingCostEl.textContent = 'رایگان';
+        } else if (this.value === 'express') {
+          shippingCostEl.textContent = '۵۰,۰۰۰ تومان';
+        } else {
+          shippingCostEl.textContent = '۳۰,۰۰۰ تومان';
+        }
+      });
+    });
+
+    // اعتبارسنجی و ارسال فرم پرداخت
+    function handleCheckout(event) {
+      event.preventDefault();
+      
+      // اعتبارسنجی فرم‌ها
+      const checkoutForm = document.getElementById('checkoutForm');
+      const addressForm = document.getElementById('addressForm');
+      
+      if (!checkoutForm.checkValidity() || !addressForm.checkValidity()) {
+        alert('لطفاً تمام فیلدهای الزامی را پر کنید.');
+        checkoutForm.reportValidity();
+        addressForm.reportValidity();
+        return;
+      }
+      
+      // بررسی انتخاب روش پرداخت
+      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+      const shippingMethod = document.querySelector('input[name="shippingMethod"]:checked');
+      
+      if (!paymentMethod || !shippingMethod) {
+        alert('لطفاً روش پرداخت و ارسال را انتخاب کنید.');
+        return;
+      }
+      
+      // در اینجا می‌توانید اطلاعات را به سرور ارسال کنید
+      // این یک نمونه است و نیاز به اتصال به درگاه پرداخت دارد
+      
+      if (paymentMethod.value === 'online') {
+        // شبیه‌سازی اتصال به درگاه پرداخت
+        alert('در حال هدایت به درگاه پرداخت...\n\n(این یک نسخه نمونه است. در نسخه واقعی به درگاه بانکی متصل می‌شود.)');
+      } else if (paymentMethod.value === 'cash') {
+        alert('سفارش شما با موفقیت ثبت شد!\n\nمبلغ به مأمور پست پرداخت خواهد شد.');
+      } else {
+        alert('درخواست پرداخت اقساطی شما ثبت شد.\n\nکارشناسان ما با شما تماس خواهند گرفت.');
+      }
+      
+      // در حالت واقعی، اینجا باید به صفحه تایید یا صفحه درگاه پرداخت هدایت شود
+      // window.location.href = 'order-confirmation.html';
+    }
+
+    // اعتبارسنجی شماره تلفن
+    document.getElementById('phone').addEventListener('input', function() {
+      const phone = this.value;
+      if (phone && !phone.match(/^09[0-9]{9}$/)) {
+        this.setCustomValidity('شماره تلفن باید ۱۱ رقم و با 09 شروع شود.');
+      } else {
+        this.setCustomValidity('');
+      }
+    });
+  </script>
+</body>
+</html>
